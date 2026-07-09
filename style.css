@@ -502,3 +502,109 @@ to {
 }
 
 }
+/* ================= BALLOONS ================= */
+
+.balloon{
+  position:absolute;
+  width:48px;
+  height:58px;
+  border-radius:50%;
+  animation:float 8s linear infinite;
+  z-index:1;
+}
+
+.balloon::after{
+  content:"";
+  position:absolute;
+  width:2px;
+  height:55px;
+  background:white;
+  left:23px;
+  top:58px;
+}
+
+.b1{
+  background:#2563eb;
+  left:8%;
+  bottom:-80px;
+}
+
+.b2{
+  background:#ffffff;
+  left:45%;
+  bottom:-160px;
+  animation-delay:2s;
+}
+
+.b3{
+  background:#8fd4ff;
+  right:8%;
+  bottom:-120px;
+  animation-delay:4s;
+}
+
+@keyframes float{
+  from{
+    transform:translateY(0);
+  }
+  to{
+    transform:translateY(-120vh);
+  }
+}
+
+
+/* ================= HEARTS ================= */
+
+.heart{
+  position:absolute;
+  width:18px;
+  height:18px;
+  background:#9adfff;
+  transform:rotate(45deg);
+  animation:heartFloat 7s linear infinite;
+  z-index:1;
+}
+
+.heart::before,
+.heart::after{
+  content:"";
+  position:absolute;
+  width:18px;
+  height:18px;
+  background:#9adfff;
+  border-radius:50%;
+}
+
+.heart::before{
+  top:-9px;
+}
+
+.heart::after{
+  left:-9px;
+}
+
+.h1{
+  left:18%;
+  bottom:-40px;
+}
+
+.h2{
+  left:72%;
+  bottom:-80px;
+  animation-delay:2s;
+}
+
+.h3{
+  left:50%;
+  bottom:-140px;
+  animation-delay:4s;
+}
+
+@keyframes heartFloat{
+  from{
+    transform:translateY(0) rotate(45deg);
+  }
+  to{
+    transform:translateY(-120vh) rotate(45deg);
+  }
+}
