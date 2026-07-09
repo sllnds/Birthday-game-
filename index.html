@@ -1,133 +1,180 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-  <title>Birthday Mission</title>
-  <link rel="stylesheet" href="style.css">
+
+<title>Birthday Mission</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="style.css">
+
 </head>
+
 
 <body>
 
+
 <div class="game">
 
-  <!-- BACKGROUND PIXELS -->
-  <div class="balloon b1"></div>
-  <div class="balloon b2"></div>
-  <div class="balloon b3"></div>
 
-  <div class="heart h1"></div>
-  <div class="heart h2"></div>
-  <div class="heart h3"></div>
+<!-- BACKGROUND PIXELS -->
 
+<div class="balloon b1"></div>
+<div class="balloon b2"></div>
+<div class="balloon b3"></div>
 
-  <!-- START SCREEN -->
-
-  <section id="start-screen" class="screen active">
-
-    <div class="pixel-duck">
-      <div class="hat"></div>
-      <div class="body">
-        <div class="eye e1"></div>
-        <div class="eye e2"></div>
-        <div class="beak"></div>
-      </div>
-    </div>
-
-
-    <h1>
-      HAPPY BIRTHDAY<br>
-      ABDULRAHMAN
-    </h1>
-
-    <p>
-      A little birthday mission made with love
-    </p>
-
-
-    <button id="start-btn">
-      START GAME
-    </button>
-
-  </section>
+<div class="heart h1"></div>
+<div class="heart h2"></div>
+<div class="heart h3"></div>
 
 
 
-  <!-- QUIZ SCREEN -->
+
+<!-- START SCREEN -->
 
 
-  <section id="quiz-screen" class="screen">
-
-    <div class="top-bar">
-      <span id="progress"></span>
-    </div>
+<section id="start-screen" class="screen active">
 
 
-    <div class="pixel-duck small">
-      <div class="hat"></div>
-      <div class="body">
-        <div class="eye e1"></div>
-        <div class="eye e2"></div>
-        <div class="beak"></div>
-      </div>
-    </div>
+<div class="pixel-duck">
+
+<div class="hat"></div>
+
+<div class="body">
+
+<div class="eye e1"></div>
+<div class="eye e2"></div>
+
+<div class="beak"></div>
+
+</div>
+
+</div>
 
 
-    <div class="question-card">
 
-      <h2 id="question"></h2>
-
-
-      <div id="answers">
-
-        <button class="answer">
-          <span>A</span>
-        </button>
-
-        <button class="answer">
-          <span>B</span>
-        </button>
-
-        <button class="answer">
-          <span>C</span>
-        </button>
-
-        <button class="answer">
-          <span>D</span>
-        </button>
-
-      </div>
+<h1>
+HAPPY BIRTHDAY<br>
+ABDULRAHMAN
+</h1>
 
 
-    </div>
+<p>
+A little birthday mission made with love
+</p>
 
 
-    <p id="wrong-message"></p>
+
+<button id="start-btn">
+START GAME
+</button>
 
 
-  </section>
+</section>
 
 
 
 
 
-  <!-- CAKE SCREEN -->
+
+<!-- QUIZ SCREEN -->
 
 
-  <section id="cake-screen" class="screen">
+<section id="quiz-screen" class="screen">
 
 
-    <h1>
-      YOU DID IT!
-    </h1>
+<div class="top-bar">
+
+<span id="progress"></span>
+
+</div>
 
 
-    <p>
-      Make a wish...
-    </p>
 
 
-    <div class="cake">
+<div class="pixel-duck small">
 
-      <div class="candle c1"></div>
+<div class="hat"></div>
+
+<div class="body">
+
+<div class="eye e1"></div>
+<div class="eye e2"></div>
+
+<div class="beak"></div>
+
+</div>
+
+</div>
+
+
+
+
+<div class="question-card">
+
+
+<h2 id="question"></h2>
+
+
+
+<div id="answers">
+
+
+<button class="answer"></button>
+
+<button class="answer"></button>
+
+<button class="answer"></button>
+
+<button class="answer"></button>
+
+
+
+</div>
+
+
+
+</div>
+
+
+
+<p id="wrong-message"></p>
+
+
+
+</section>
+
+
+
+
+
+
+
+
+<!-- CAKE SCREEN -->
+
+
+<section id="cake-screen" class="screen">
+
+
+
+<h1>
+YOU DID IT!
+</h1>
+
+
+<p>
+Make a wish...
+</p>
+
+
+
+
+<div class="cake">
+
+
+<div class="candle c1"></div>
 <div class="candle c2"></div>
 <div class="candle c3"></div>
 <div class="candle c4"></div>
@@ -137,77 +184,117 @@
 <div class="candle c8"></div>
 <div class="candle c9"></div>
 <div class="candle c10"></div>
+
 <div class="candle c11"></div>
 <div class="candle c12"></div>
 <div class="candle c13"></div>
 <div class="candle c14"></div>
 <div class="candle c15"></div>
 <div class="candle c16"></div>
+
 <div class="candle c17"></div>
 <div class="candle c18"></div>
 <div class="candle c19"></div>
 <div class="candle c20"></div>
 
-      <div class="cake-top"></div>
-      <div class="cake-body"></div>
-
-    </div>
 
 
-    <button id="blow-btn">
-      BLOW CANDLES
-    </button>
+<div class="cake-top"></div>
 
+<div class="cake-body"></div>
 
-    <p id="mic-status"></p>
-
-
-  </section>
-
-
-
-
-  <!-- FINAL SCREEN -->
-
-
-  <section id="final-screen" class="screen">
-
-
-    <div class="pixel-duck">
-
-      <div class="hat"></div>
-
-      <div class="body">
-        <div class="eye e1"></div>
-        <div class="eye e2"></div>
-        <div class="beak"></div>
-      </div>
-
-    </div>
-
-
-    <h1>
-      MISSION COMPLETE
-    </h1>
-
-
-    <p>
-      Your final reward is waiting...
-    </p>
-
-
-    <button id="gift-btn">
-      UNLOCK MY GIFT
-    </button>
-
-
-  </section>
 
 
 </div>
 
 
+
+
+
+<button id="blow-btn">
+BLOW CANDLES
+</button>
+
+
+
+<p id="mic-status"></p>
+
+
+
+</section>
+
+
+
+
+
+
+
+
+<!-- FINAL SCREEN -->
+
+
+<section id="final-screen" class="screen">
+
+
+
+<div class="pixel-duck">
+
+
+<div class="hat"></div>
+
+
+<div class="body">
+
+<div class="eye e1"></div>
+
+<div class="eye e2"></div>
+
+<div class="beak"></div>
+
+
+</div>
+
+
+</div>
+
+
+
+
+
+
+<h1>
+MISSION COMPLETE
+</h1>
+
+
+
+<p>
+Your final reward is waiting...
+</p>
+
+
+
+
+<button id="gift-btn">
+UNLOCK MY GIFT
+</button>
+
+
+
+
+</section>
+
+
+
+
+
+</div>
+
+
+
 <script src="script.js"></script>
 
+
 </body>
+
 </html>
