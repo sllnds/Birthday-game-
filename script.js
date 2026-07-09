@@ -19,135 +19,137 @@ const finishBtn = document.getElementById("finish-btn");
 const questions = [
 
 {
-q:"I say I don't want anything... what do I secretly hope for?",
+q:"When I say 'I don't want anything'... what do I really mean?",
 a:[
-"I really want nothing",
-"Something thoughtful without asking",
-"Someone else choosing for me",
-"Just money"
-],
-c:1
-},
-
-{
-q:"What makes a gift special to me?",
-a:[
-"The price",
-"How popular it is",
-"The meaning behind it",
-"The packaging"
+"Nothing, I’m not playing games",
+"I want you to figure it out somehow",
+"I want a cute surprise but I won’t admit it",
+"Money, let’s be honest!"
 ],
 c:2
 },
 
 {
-q:"My favorite kind of memories are...",
+q:"What is something I would 100% do?",
 a:[
-"Random expensive experiences",
-"Small details that mean something",
-"Things everyone sees",
-"Things that don't last"
+"Say I won't buy it then buy it",
+"Google a random thing for an hour",
+"Make a plan and ignore it",
+"Start a new obsession"
+],
+c:2
+},
+
+{
+q:"What is my most used phrase?",
+a:[
+"ليش تكرهني؟",
+"سري امها",
+"يناااسووو",
+"قس وت"
 ],
 c:1
 },
 
 {
-q:"What makes me feel loved the most?",
+q:"If we go out and I say 'I don't know where I wanna eat'...",
 a:[
-"Someone remembering little things",
-"Someone buying anything",
-"Someone agreeing with everything",
-"Someone being perfect"
+"I genuinely don't know",
+"I want you to choose but choose correctly",
+"I will reject every option",
+"I already know where I want to go"
 ],
-c:0
+c:2
 },
 
 {
-q:"My perfect simple moment is...",
+q:"What is our biggest enemy in this relationship?",
 a:[
-"A huge party",
-"Coffee, a cute place, and you",
-"Being famous",
-"Shopping all day"
+"Distance",
+"Food choices",
+"Different music taste",
+"Being too busy"
+],
+c:2
+},
+
+{
+q:"The most realistic thing about us is:",
+a:[
+"We can't stay mad for long",
+"We argue about the dumbest things",
+"We always find something to talk about",
+"We are both dramatic"
+],
+c:2
+},
+
+{
+q:"What is the most likely thing we do on a call?",
+a:[
+"Say bye 10 times",
+"Hang up immediately",
+"Only talk about serious stuff",
+"Stay silent the most of the time"
+],
+c:4
+},
+
+{
+q:"What is something I will never say no to?",
+a:[
+"Food",
+"Money",
+"Kissing you",
+"Coffee"
+],
+c:3
+},
+
+{
+q:"What is my secret weapon in an argument?",
+a:[
+"Remembering every tiny detail",
+"Giving up immediately",
+"Pretending I forgot",
+"Changing the topic"
 ],
 c:1
 },
 
 {
-q:"When I create a surprise, I care about...",
+q:"What makes me feel most loved by you?",
 a:[
-"Making it personal",
-"Making it expensive",
-"Making everyone notice",
-"Finishing quickly"
-],
-c:0
-},
-
-{
-q:"Something I always notice...",
-a:[
-"Small details",
-"Brand names",
-"Prices",
-"Trends"
-],
-c:0
-},
-
-{
-q:"How do I usually show love?",
-a:[
-"By disappearing",
-"By putting effort into details",
-"By avoiding emotions",
-"By keeping things simple"
+"When you put effort without me asking",
+"When you buy me the most expensive thing",
+"When you reply instantly 24/7",
+"When you agree with everything I say"
 ],
 c:1
 },
 
 {
-q:"What describes me best?",
+
+q:"What is my love language with you?",
 a:[
-"I turn moments into memories",
-"I don't care about details",
-"I hate surprises",
-"I never plan"
+"Thoughtful little things",
+"Acts of service",
+"Quality time",
+"All of them, obviously"
 ],
-c:0
+c:4
 },
 
 {
-q:"What makes me happiest?",
-a:[
-"Something personal",
-"Something everyone has",
-"Something expensive",
-"Something random"
-],
-c:0
-},
 
-{
-q:"What proves someone knows me?",
+q:"What do you think happens next?",
 a:[
-"They remember small things",
-"They buy expensive gifts",
-"They copy trends",
-"They impress others"
+"Nothing, we just say bye",
+"A little surprise waiting for you",
+"I disappear randomly",
+"I make you guess forever"
 ],
-c:0
-},
-
-{
-q:"The best birthday ending would be...",
-a:[
-"A normal goodbye",
-"A surprise made with love",
-"A random gift",
-"Nothing special"
-],
-c:1
+c:2
 }
 
 ];
