@@ -236,22 +236,19 @@ gap:5px;
 
 
 .answer {
-
-text-align:left;
-
+  text-align:left;
+  color:#0b1f3a;
+  background:#dff4ff;
+  border-color:#1769aa;
+  font-size:14px;
 }
 
 
 .answer span {
-
-background:white;
-
-color:#1769aa;
-
-padding:5px;
-
-margin-right:10px;
-
+  background:#1769aa;
+  color:white;
+  padding:8px 10px;
+  margin-right:10px;
 }
 
 
