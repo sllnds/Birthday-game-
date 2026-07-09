@@ -340,3 +340,118 @@ h1 {
 }
 
 }
+/* BALLOONS */
+
+.balloon {
+  position:absolute;
+  width:50px;
+  height:60px;
+  border-radius:50%;
+  animation:float 8s infinite;
+}
+
+
+.balloon:after {
+  content:"";
+  position:absolute;
+  width:3px;
+  height:60px;
+  background:white;
+  left:23px;
+  top:60px;
+}
+
+
+.b1 {
+  background:#2563eb;
+  left:10%;
+  bottom:-100px;
+}
+
+
+.b2 {
+  background:white;
+  left:45%;
+  bottom:-200px;
+  animation-delay:2s;
+}
+
+
+.b3 {
+  background:#93c5fd;
+  right:10%;
+  bottom:-150px;
+  animation-delay:4s;
+}
+
+
+@keyframes float {
+
+to {
+  transform:translateY(-120vh);
+}
+
+}
+
+
+
+/* HEARTS */
+
+.heart {
+  position:absolute;
+  width:20px;
+  height:20px;
+  background:#8ddcff;
+  transform:rotate(45deg);
+  animation:heart 7s infinite;
+}
+
+
+.heart:before,
+.heart:after {
+  content:"";
+  position:absolute;
+  width:20px;
+  height:20px;
+  background:#8ddcff;
+  border-radius:50%;
+}
+
+
+.heart:before {
+  top:-10px;
+}
+
+
+.heart:after {
+  left:-10px;
+}
+
+
+.h1 {
+  left:20%;
+  bottom:-50px;
+}
+
+
+.h2 {
+  left:70%;
+  bottom:-100px;
+  animation-delay:2s;
+}
+
+
+.h3 {
+  left:50%;
+  bottom:-150px;
+  animation-delay:4s;
+}
+
+
+@keyframes heart {
+
+to {
+  transform:translateY(-100vh) rotate(45deg);
+}
+
+}
