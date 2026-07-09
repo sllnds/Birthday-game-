@@ -661,3 +661,34 @@ transform:scale(.85);
   }
 
 }
+/* FIX QUIZ DISPLAY */
+
+#quiz-screen {
+  width: 90%;
+  max-width: 850px;
+  height: auto;
+  overflow: visible;
+}
+
+#answers {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.answer {
+  display: block;
+  width: 100%;
+  min-height: 65px;
+  font-size: 20px;
+  padding: 15px;
+}
+
+.question-card {
+  overflow: visible;
+}
+
+.game {
+  overflow-y: auto;
+  min-height: 100vh;
+}
