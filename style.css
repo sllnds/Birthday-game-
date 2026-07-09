@@ -14,6 +14,7 @@ body {
 .game {
   width: 100%;
   min-height: 100vh;
+  padding:40px;
   height: auto;
   position: relative;
   display: flex;
@@ -607,4 +608,56 @@ transform:scale(.85);
   color: white !important;
   padding: 8px 10px;
   margin-right: 10px;
+}
+/* iPad optimization */
+
+@media (min-width: 768px) {
+
+  .screen {
+    width: 75%;
+    max-width: 850px;
+    padding: 40px 0;
+  }
+
+
+  h1 {
+    font-size: 38px;
+  }
+
+
+  p {
+    font-size: 20px;
+  }
+
+
+  .question-card {
+    width: 100%;
+    padding: 35px;
+  }
+
+
+  .question-card h2 {
+    font-size: 28px;
+    line-height: 1.7;
+  }
+
+
+  .answer {
+    font-size: 22px;
+    padding: 22px;
+    min-height: 70px;
+  }
+
+
+  .pixel-duck {
+    transform: scale(1.2);
+    margin-bottom: 50px;
+  }
+
+
+  button {
+    font-size: 18px;
+    padding: 22px;
+  }
+
 }
