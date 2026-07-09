@@ -16,6 +16,7 @@ const micStatus = document.getElementById("mic-status");
 const giftBtn = document.getElementById("gift-btn");
 const realGiftScreen = document.getElementById("real-gift-screen");
 const finishBtn = document.getElementById("finish-btn");
+
 const questions = [
 
 {
@@ -129,7 +130,6 @@ c:0
 },
 
 {
-
 q:"What is my love language with you?",
 a:[
 "Thoughtful little things",
@@ -141,7 +141,6 @@ c:3
 },
 
 {
-
 q:"What do you think happens next?",
 a:[
 "Nothing, we just say bye",
