@@ -13,7 +13,9 @@ const wrongMessage = document.getElementById("wrong-message");
 const blowBtn = document.getElementById("blow-btn");
 const micStatus = document.getElementById("mic-status");
 
-
+const giftBtn = document.getElementById("gift-btn");
+const realGiftScreen = document.getElementById("real-gift-screen");
+const finishBtn = document.getElementById("finish-btn");
 const questions = [
 
 {
@@ -425,3 +427,40 @@ micStatus.innerHTML =
 
 
 }
+giftBtn.onclick = () => {
+
+  finalScreen.classList.remove("active");
+
+  realGiftScreen.classList.add("active");
+
+};
+
+finishBtn.onclick = () => {
+
+  document.body.innerHTML = `
+    <div style="
+      height:100vh;
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      flex-direction:column;
+      background:#67c7ff;
+      color:white;
+      font-family:'Pixelify Sans', monospace;
+      text-align:center;
+      padding:30px;
+    ">
+
+      <h1 style="font-size:52px;">
+        HAPPY BIRTHDAY ❤️
+      </h1>
+
+      <p style="font-size:28px; line-height:1.7; max-width:700px;">
+        Go open your real gift...<br><br>
+        And don't forget to read the letter after!
+      </p>
+
+    </div>
+  `;
+
+};
