@@ -2,165 +2,173 @@ const startBtn = document.getElementById("start-btn");
 
 const startScreen = document.getElementById("start-screen");
 const quizScreen = document.getElementById("quiz-screen");
+const cakeScreen = document.getElementById("cake-screen");
 const finalScreen = document.getElementById("final-screen");
 
-const questionText = document.getElementById("question");
+const question = document.getElementById("question");
 const answers = document.querySelectorAll(".answer");
-const message = document.getElementById("duck-message");
+const progress = document.getElementById("progress");
+const wrongMessage = document.getElementById("wrong-message");
+
+const blowBtn = document.getElementById("blow-btn");
+const micStatus = document.getElementById("mic-status");
+
 
 
 const questions = [
 
 {
-question: "I say “I don’t want anything”… what do I actually mean? ",
-answers:[
-"I really don’t want anything",
-"I’m hoping you’ll understand what I want without me saying it",
-"I changed my mind",
-"I’m waiting for someone else to decide"
+q:"I say I don't want anything... what do I secretly hope for?",
+a:[
+"I really want nothing",
+"Something thoughtful without asking",
+"Someone else choosing for me",
+"Just money"
 ],
-correct:1
+c:1
 },
 
 
 {
-question:"What makes me excited the fastest? ",
-answers:[
-"Buying something new",
-"Being around many people",
-"Having something special planned that I can look forward to",
-"Watching movies all day"
-],
-correct:2
-},
-
-
-{
-question:"I see something cute in a store… what happens? ",
-answers:[
-"I forget about it immediately",
-"I buy everything I see",
-"I save the idea and keep thinking about it",
-"I only care if it is expensive"
-],
-correct:2
-},
-
-
-{
-question:"What makes a gift special to me? ",
-answers:[
-"The effort behind it",
+q:"What makes a gift special to me?",
+a:[
 "The price",
-"How famous it is",
-"How many people like it"
+"How popular it is",
+"The meaning behind it",
+"The packaging"
 ],
-correct:0
+c:2
 },
 
 
 {
-question:"What will I focus on when making a surprise? ",
-answers:[
-"Making it expensive",
-"Making it perfect for pictures",
-"Making everyone notice it",
-"Adding details only they understand"
+q:"My favorite kind of memories are...",
+a:[
+"Random expensive experiences",
+"Small details that mean something",
+"Things everyone sees",
+"Things that don't last"
 ],
-correct:3
+c:1
 },
 
 
 {
-question:"What catches my attention? ",
-answers:[
-"Things that everyone has",
-"Things that are cute and meaningful",
-"Things that are expensive",
-"Things that are practical only"
+q:"What makes me feel loved the most?",
+a:[
+"Someone remembering little things",
+"Someone buying anything",
+"Someone agreeing with everything",
+"Someone being perfect"
 ],
-correct:1
+c:0
 },
 
 
 {
-question:"What do I notice that others ignore?",
-answers:[
-"Small details and memories",
-"Trends",
-"Prices",
-"People’s opinions"
-],
-correct:0
-},
-
-
-{
-question:"How do I show love?",
-answers:[
-"By talking all day",
-"By buying gifts only",
-"By avoiding emotions",
-"By putting effort into making someone feel special"
-],
-correct:3
-},
-
-
-{
-question:"My perfect simple moment would be… ",
-answers:[
-"A crowded place",
-"A fancy event",
+q:"My perfect simple moment is...",
+a:[
+"A huge party",
 "Coffee, a cute place, and you",
-"Sleeping all day"
+"Being famous",
+"Shopping all day"
 ],
-correct:2
+c:1
 },
 
 
 {
-question:"What describes me the most?",
-answers:[
-"I turn normal moments into memories",
-"I hate planning anything",
-"I only like big events",
-"I don’t get attached"
+q:"When I create a surprise, I care about...",
+a:[
+"Making it personal",
+"Making it expensive",
+"Making everyone notice",
+"Finishing quickly"
 ],
-correct:0
+c:0
 },
 
 
 {
-question:"What makes me feel understood?",
-answers:[
-"Someone giving advice",
-"Someone agreeing with me",
-"Someone remembering little details",
-"Someone buying something big"
+q:"Something I always notice...",
+a:[
+"Small details",
+"Brand names",
+"Prices",
+"Trends"
 ],
-correct:2
+c:0
 },
 
 
 {
-question:"What would make me happiest?",
-answers:[
+q:"How do I usually show love?",
+a:[
+"By disappearing",
+"By putting effort into details",
+"By avoiding emotions",
+"By keeping things simple"
+],
+c:1
+},
+
+
+{
+q:"What describes me best?",
+a:[
+"I turn moments into memories",
+"I don't care about details",
+"I hate surprises",
+"I never plan"
+],
+c:0
+},
+
+
+{
+q:"What makes me happiest?",
+a:[
+"Something personal",
+"Something everyone has",
 "Something expensive",
-"Something useful",
-"Something everyone loves",
-"Something personal that shows they know me"
+"Something random"
 ],
-correct:3
+c:0
+},
+
+
+{
+q:"What proves someone knows me?",
+a:[
+"They remember small things",
+"They buy expensive gifts",
+"They copy trends",
+"They impress others"
+],
+c:0
+},
+
+
+{
+q:"The best birthday ending would be...",
+a:[
+"A normal goodbye",
+"A surprise made with love",
+"A random gift",
+"Nothing special"
+],
+c:1
 }
 
 ];
 
 
+
 let current = 0;
 
 
-startBtn.onclick = function(){
+
+startBtn.onclick = ()=>{
 
 startScreen.classList.remove("active");
 quizScreen.classList.add("active");
@@ -173,16 +181,56 @@ showQuestion();
 
 function showQuestion(){
 
-let q = questions[current];
+let item = questions[current];
 
-questionText.innerHTML = q.question;
+progress.innerHTML =
+`QUESTION ${current+1} / ${questions.length}`;
 
 
-answers.forEach((button,index)=>{
+question.innerHTML = item.q;
 
-button.innerHTML = q.answers[index];
 
-button.onclick = ()=> checkAnswer(index);
+answers.forEach((btn,index)=>{
+
+btn.innerHTML =
+`${String.fromCharCode(65+index)}. ${item.a[index]}`;
+
+
+btn.onclick = ()=>{
+
+if(index === item.c){
+
+current++;
+
+if(current < questions.length){
+
+showQuestion();
+
+}else{
+
+quizScreen.classList.remove("active");
+cakeScreen.classList.add("active");
+
+startMic();
+
+}
+
+}else{
+
+wrongMessage.innerHTML =
+"Birthday celebration cancelled";
+
+setTimeout(()=>{
+
+wrongMessage.innerHTML="";
+
+},1500);
+
+}
+
+
+};
+
 
 });
 
@@ -190,48 +238,157 @@ button.onclick = ()=> checkAnswer(index);
 
 
 
-function checkAnswer(choice){
 
-if(choice === questions[current].correct){
-
-message.innerHTML="🐥 You know me! 💙";
-
-current++;
+/* CANDLES */
 
 
-setTimeout(()=>{
+function blowCandles(){
 
-if(current < questions.length){
+let candles =
+document.querySelectorAll(".candle");
 
-showQuestion();
-message.innerHTML="";
+
+let number = 0;
+
+
+let timer=setInterval(()=>{
+
+
+if(number < candles.length){
+
+candles[number].classList.add("off");
+
+number++;
 
 }
 
 else{
 
-quizScreen.classList.remove("active");
+clearInterval(timer);
+
+
+setTimeout(()=>{
+
+cakeScreen.classList.remove("active");
 finalScreen.classList.add("active");
 
-}
 
 },1000);
 
 
 }
 
-else{
 
-message.innerHTML=
-"Birthday celebration cancelled 💔";
+},250);
 
-setTimeout(()=>{
-
-message.innerHTML=
-"Just kidding! Try again 🐥";
-
-},1500);
 
 }
+
+
+
+
+
+/* BUTTON BACKUP */
+
+
+blowBtn.onclick=()=>{
+
+blowCandles();
+
+};
+
+
+
+
+
+/* MICROPHONE */
+
+
+function startMic(){
+
+
+if(!navigator.mediaDevices){
+
+micStatus.innerHTML=
+"Tap the button to blow";
+
+return;
+
+}
+
+
+navigator.mediaDevices.getUserMedia({
+
+audio:true
+
+})
+
+.then(stream=>{
+
+
+micStatus.innerHTML=
+"Blow on your candles";
+
+
+const audio =
+new AudioContext();
+
+
+const mic =
+audio.createMediaStreamSource(stream);
+
+
+const analyser =
+audio.createAnalyser();
+
+
+mic.connect(analyser);
+
+
+let data =
+new Uint8Array(analyser.frequencyBinCount);
+
+
+
+function listen(){
+
+
+analyser.getByteFrequencyData(data);
+
+
+let volume =
+data.reduce((a,b)=>a+b)/data.length;
+
+
+
+if(volume > 45){
+
+blowCandles();
+
+stream.getTracks()
+.forEach(t=>t.stop());
+
+}
+
+
+requestAnimationFrame(listen);
+
+
+}
+
+
+listen();
+
+
+
+})
+
+.catch(()=>{
+
+micStatus.innerHTML=
+"Tap the button to blow";
+
+});
+
 
 }
