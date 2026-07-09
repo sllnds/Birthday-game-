@@ -26,7 +26,7 @@ a:[
 "I want a cute surprise but I won’t admit it",
 "Money, let’s be honest!"
 ],
-c:2
+c:1
 },
 
 {
@@ -37,7 +37,7 @@ a:[
 "Make a plan and ignore it",
 "Start a new obsession"
 ],
-c:2
+c:1
 },
 
 {
@@ -48,7 +48,7 @@ a:[
 "يناااسووو",
 "قس وت"
 ],
-c:1
+c:0
 },
 
 {
@@ -59,7 +59,7 @@ a:[
 "I will reject every option",
 "I already know where I want to go"
 ],
-c:2
+c:1
 },
 
 {
@@ -70,7 +70,7 @@ a:[
 "Different music taste",
 "Being too busy"
 ],
-c:2
+c:1
 },
 
 {
@@ -81,7 +81,7 @@ a:[
 "We always find something to talk about",
 "We are both dramatic"
 ],
-c:2
+c:1
 },
 
 {
@@ -92,7 +92,7 @@ a:[
 "Only talk about serious stuff",
 "Stay silent the most of the time"
 ],
-c:4
+c:3
 },
 
 {
@@ -103,7 +103,7 @@ a:[
 "Kissing you",
 "Coffee"
 ],
-c:3
+c:2
 },
 
 {
@@ -114,7 +114,7 @@ a:[
 "Pretending I forgot",
 "Changing the topic"
 ],
-c:1
+c:0
 },
 
 {
@@ -125,7 +125,7 @@ a:[
 "When you reply instantly 24/7",
 "When you agree with everything I say"
 ],
-c:1
+c:0
 },
 
 {
@@ -137,7 +137,7 @@ a:[
 "Quality time",
 "All of them, obviously"
 ],
-c:4
+c:3
 },
 
 {
@@ -149,7 +149,7 @@ a:[
 "I disappear randomly",
 "I make you guess forever"
 ],
-c:2
+c:1
 }
 
 ];
