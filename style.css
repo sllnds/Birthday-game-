@@ -1,109 +1,121 @@
 @import url('https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400;600;700&display=swap');
 
-
 * {
   box-sizing: border-box;
 }
 
-
-body {
-  margin: 0;
-  overflow-x: hidden;
-  overflow-y: auto;
-  font-family: "Pixelify Sans", monospace;
-  background: linear-gradient(#67c7ff, #c9efff);
+html, body {
+  margin:0;
+  width:100%;
+  height:100%;
+  overflow:hidden;
 }
 
+body {
+  font-family:"Pixelify Sans", monospace;
+  background:linear-gradient(#67c7ff,#c9efff);
+}
 
 
 .game {
-  min-height: 100vh;
-  width: 100%;
-  padding: 20px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  width:100vw;
+  height:100vh;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  position:relative;
+  overflow:hidden;
 }
 
 
+/* SCREENS */
 
 .screen {
 
-  display:none;
+display:none;
 
-  width:min(85vw,700px);
+width:85vw;
 
-  padding:20px;
+max-width:800px;
 
-  text-align:center;
+height:90vh;
 
-  color:white;
+padding:20px;
+
+text-align:center;
+
+color:white;
 
 }
-
 
 
 .screen.active {
 
-display:block;
+display:flex;
+
+flex-direction:column;
+
+justify-content:center;
+
+align-items:center;
 
 }
 
 
 
+/* TEXT */
+
 h1 {
 
-font-size:36px;
+font-size:38px;
 
 line-height:1.3;
+
+margin:10px;
 
 text-shadow:4px 4px #2471b8;
 
 }
 
 
-
 p {
 
-font-size:18px;
+font-size:20px;
 
 line-height:1.5;
 
+margin:10px;
+
 }
+
 
 
 
 /* BUTTONS */
 
-
 button {
 
 width:100%;
 
-max-width:550px;
+max-width:600px;
 
-padding:16px;
+padding:18px;
 
-margin:12px auto;
-
-display:block;
+margin:10px;
 
 font-family:"Pixelify Sans", monospace;
 
-font-size:20px;
+font-size:22px;
 
 color:#06295c;
 
-background:#dff5ff;
+background:#e6f7ff;
 
 border:5px solid #1769aa;
 
 box-shadow:0 7px #1769aa;
 
-cursor:pointer;
-
 }
-
 
 
 button:active {
@@ -116,18 +128,13 @@ box-shadow:none;
 
 
 
-
-
 /* DUCK */
-
 
 .pixel-duck {
 
 width:120px;
 
 height:120px;
-
-margin:auto;
 
 position:relative;
 
@@ -138,19 +145,20 @@ animation:bounce 1s infinite alternate;
 
 .pixel-duck.small {
 
-transform:scale(.75);
+transform:scale(.7);
+
+margin-bottom:-20px;
 
 }
-
 
 
 .body {
 
 position:absolute;
 
-width:80px;
+width:85px;
 
-height:70px;
+height:75px;
 
 background:#ffd83d;
 
@@ -161,7 +169,6 @@ left:20px;
 bottom:15px;
 
 }
-
 
 
 .eye {
@@ -179,13 +186,11 @@ top:20px;
 }
 
 
-
 .e1 {
 
 left:15px;
 
 }
-
 
 
 .e2 {
@@ -195,32 +200,30 @@ right:15px;
 }
 
 
-
 .beak {
 
 position:absolute;
 
-width:28px;
+width:30px;
 
-height:14px;
+height:15px;
 
 background:#ff9418;
 
-bottom:-16px;
+bottom:-18px;
 
-left:24px;
+left:25px;
 
 }
-
 
 
 .hat {
 
 position:absolute;
 
-width:55px;
+width:60px;
 
-height:28px;
+height:30px;
 
 background:#2563eb;
 
@@ -228,46 +231,40 @@ border:5px solid #1746a2;
 
 left:32px;
 
-top:8px;
+top:10px;
 
 }
-
 
 
 @keyframes bounce {
 
-from{
-
+from {
 transform:translateY(0);
-
 }
 
-to{
-
+to {
 transform:translateY(-10px);
-
 }
 
 }
-
 
 
 
 
 /* QUIZ */
 
-
 .top-bar {
 
-font-size:20px;
+font-size:22px;
 
-margin-bottom:15px;
+margin-bottom:10px;
 
 }
 
 
-
 .question-card {
+
+width:100%;
 
 background:rgba(255,255,255,.3);
 
@@ -278,12 +275,13 @@ padding:25px;
 }
 
 
-
 .question-card h2 {
 
-font-size:24px;
+font-size:27px;
 
 line-height:1.4;
+
+margin:5px;
 
 }
 
@@ -291,13 +289,15 @@ line-height:1.4;
 
 #answers {
 
-display:flex;
+display:grid;
 
-flex-direction:column;
+grid-template-columns:1fr 1fr;
 
-gap:12px;
+gap:15px;
 
 margin-top:20px;
+
+width:100%;
 
 }
 
@@ -307,7 +307,7 @@ margin-top:20px;
 
 font-family:"Pixelify Sans", monospace;
 
-font-size:20px;
+font-size:22px;
 
 color:#06295c !important;
 
@@ -315,12 +315,21 @@ background:#e6f7ff !important;
 
 border:5px solid #1769aa !important;
 
-min-height:60px;
+min-height:80px;
 
 padding:15px;
 
-}
+display:flex;
 
+align-items:center;
+
+justify-content:center;
+
+text-align:center;
+
+line-height:1.3;
+
+}
 
 
 .answer span {
@@ -332,91 +341,21 @@ display:none;
 
 
 
-
-/* BALLOONS */
-
-
-.balloon {
-
-position:absolute;
-
-width:45px;
-
-height:55px;
-
-border-radius:50%;
-
-}
-
-
-
-.b1 {
-
-background:#2563eb;
-
-left:10%;
-
-}
-
-
-.b2 {
-
-background:white;
-
-left:45%;
-
-}
-
-
-.b3 {
-
-background:#93c5fd;
-
-right:10%;
-
-}
-
-
-
-
-
-/* HEARTS */
-
-
-.heart {
-
-position:absolute;
-
-width:18px;
-
-height:18px;
-
-background:#8ddcff;
-
-transform:rotate(45deg);
-
-}
-
-
-
-
 /* CAKE */
-
 
 .cake {
 
-width:220px;
+width:240px;
 
-height:170px;
-
-margin:15px auto;
+height:180px;
 
 position:relative;
 
 transform:scale(.8);
 
-}
+margin:0;
 
+}
 
 
 .cake-body {
@@ -425,7 +364,7 @@ position:absolute;
 
 bottom:0;
 
-width:220px;
+width:240px;
 
 height:90px;
 
@@ -436,14 +375,13 @@ border:6px solid #3b1c0f;
 }
 
 
-
 .cake-top {
 
 position:absolute;
 
 top:45px;
 
-width:220px;
+width:240px;
 
 height:35px;
 
@@ -452,7 +390,6 @@ background:#d8a074;
 border:6px solid #3b1c0f;
 
 }
-
 
 
 
@@ -469,7 +406,6 @@ background:white;
 z-index:3;
 
 }
-
 
 
 .candle:after {
@@ -491,7 +427,6 @@ border-radius:50%;
 }
 
 
-
 .candle.off:after {
 
 display:none;
@@ -500,87 +435,37 @@ display:none;
 
 
 
-
 /* IPAD */
 
 @media(min-width:768px){
 
-
-.game {
-
-padding:20px;
-
-}
-
-
 .screen {
 
-width:700px;
+width:750px;
 
 max-width:85vw;
 
-padding:20px;
-
 }
-
 
 
 h1 {
 
-font-size:38px;
+font-size:42px;
 
 }
-
-
-
-p {
-
-font-size:20px;
-
-}
-
-
-
-.question-card {
-
-padding:30px;
-
-}
-
-
-
-.question-card h2 {
-
-font-size:26px;
-
-}
-
 
 
 .answer {
 
-font-size:22px;
-
-min-height:65px;
+font-size:24px;
 
 }
 
 
+.question-card h2 {
 
-button {
-
-font-size:22px;
-
-}
-
-
-
-.cake {
-
-transform:scale(.75);
+font-size:30px;
 
 }
-
-
 
 }
