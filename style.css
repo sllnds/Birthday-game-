@@ -1,90 +1,114 @@
 @import url('https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400;600;700&display=swap');
 
+
 * {
   box-sizing: border-box;
 }
+
 
 body {
   margin: 0;
   overflow-x: hidden;
   overflow-y: auto;
-  background: linear-gradient(#67c7ff, #c9efff);
   font-family: "Pixelify Sans", monospace;
+  background: linear-gradient(#67c7ff, #c9efff);
 }
+
 
 
 .game {
   min-height: 100vh;
   width: 100%;
-  padding: 40px;
+  padding: 20px;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
 
+
 .screen {
-  display: none;
-  width: min(85vw, 900px);
-  text-align: center;
-  color: white;
-  padding: 40px 20px;
+
+  display:none;
+
+  width:min(85vw,700px);
+
+  padding:20px;
+
+  text-align:center;
+
+  color:white;
+
 }
+
 
 
 .screen.active {
-  display: block;
+
+display:block;
+
 }
 
 
-/* TEXT */
 
 h1 {
-  font-size: clamp(35px, 5vw, 55px);
-  line-height: 1.4;
-  text-shadow: 5px 5px #2471b8;
+
+font-size:36px;
+
+line-height:1.3;
+
+text-shadow:4px 4px #2471b8;
+
 }
+
 
 
 p {
-  font-size: 24px;
-  line-height: 1.6;
+
+font-size:18px;
+
+line-height:1.5;
+
 }
 
 
-/* BUTTON */
+
+/* BUTTONS */
+
 
 button {
 
-  width: 100%;
-  max-width: 700px;
+width:100%;
 
-  padding: 25px;
+max-width:550px;
 
-  margin: 15px auto;
+padding:16px;
 
-  display: block;
+margin:12px auto;
 
-  font-family: "Pixelify Sans", monospace;
+display:block;
 
-  font-size: 24px;
+font-family:"Pixelify Sans", monospace;
 
-  color: #082b5c;
+font-size:20px;
 
-  background: #dff5ff;
+color:#06295c;
 
-  border: 6px solid #1769aa;
+background:#dff5ff;
 
-  box-shadow: 0 8px #1769aa;
+border:5px solid #1769aa;
 
-  cursor: pointer;
+box-shadow:0 7px #1769aa;
+
+cursor:pointer;
 
 }
+
 
 
 button:active {
 
-transform: translateY(8px);
+transform:translateY(7px);
 
 box-shadow:none;
 
@@ -92,12 +116,17 @@ box-shadow:none;
 
 
 
+
+
 /* DUCK */
+
 
 .pixel-duck {
 
-width:150px;
-height:150px;
+width:120px;
+
+height:120px;
+
 margin:auto;
 
 position:relative;
@@ -107,91 +136,121 @@ animation:bounce 1s infinite alternate;
 }
 
 
+.pixel-duck.small {
+
+transform:scale(.75);
+
+}
+
+
+
 .body {
 
 position:absolute;
 
-width:95px;
-height:85px;
+width:80px;
+
+height:70px;
 
 background:#ffd83d;
 
-border:7px solid #d99b00;
+border:6px solid #d99b00;
 
-left:27px;
-bottom:20px;
+left:20px;
+
+bottom:15px;
 
 }
+
 
 
 .eye {
 
 position:absolute;
 
-width:12px;
-height:12px;
+width:10px;
+
+height:10px;
 
 background:#111;
 
-top:25px;
+top:20px;
 
 }
+
 
 
 .e1 {
-left:20px;
+
+left:15px;
+
 }
+
 
 
 .e2 {
-right:20px;
+
+right:15px;
+
 }
+
 
 
 .beak {
 
 position:absolute;
 
-width:35px;
-height:18px;
+width:28px;
+
+height:14px;
 
 background:#ff9418;
 
-bottom:-20px;
+bottom:-16px;
 
-left:28px;
+left:24px;
 
 }
+
 
 
 .hat {
 
 position:absolute;
 
-width:70px;
-height:35px;
+width:55px;
+
+height:28px;
 
 background:#2563eb;
 
-border:6px solid #1746a2;
+border:5px solid #1746a2;
 
-left:40px;
-top:10px;
+left:32px;
+
+top:8px;
 
 }
+
 
 
 @keyframes bounce {
 
-from {
+from{
+
 transform:translateY(0);
-}
-
-to {
-transform:translateY(-15px);
-}
 
 }
+
+to{
+
+transform:translateY(-10px);
+
+}
+
+}
+
+
 
 
 
@@ -200,32 +259,31 @@ transform:translateY(-15px);
 
 .top-bar {
 
-font-size:25px;
-margin-bottom:25px;
+font-size:20px;
+
+margin-bottom:15px;
 
 }
+
 
 
 .question-card {
 
-width:100%;
-
 background:rgba(255,255,255,.3);
 
-border:6px solid white;
+border:5px solid white;
 
-padding:40px;
-
-border-radius:10px;
+padding:25px;
 
 }
 
 
+
 .question-card h2 {
 
-font-size:35px;
+font-size:24px;
 
-line-height:1.6;
+line-height:1.4;
 
 }
 
@@ -237,33 +295,29 @@ display:flex;
 
 flex-direction:column;
 
-gap:20px;
+gap:12px;
 
-margin-top:30px;
+margin-top:20px;
 
 }
 
 
 
-/* ANSWERS */
-
 .answer {
 
 font-family:"Pixelify Sans", monospace;
 
-font-size:26px;
-
-text-align:center;
+font-size:20px;
 
 color:#06295c !important;
 
 background:#e6f7ff !important;
 
-border:6px solid #1769aa !important;
+border:5px solid #1769aa !important;
 
-min-height:90px;
+min-height:60px;
 
-padding:25px;
+padding:15px;
 
 }
 
@@ -276,20 +330,93 @@ display:none;
 }
 
 
+
+
+
+/* BALLOONS */
+
+
+.balloon {
+
+position:absolute;
+
+width:45px;
+
+height:55px;
+
+border-radius:50%;
+
+}
+
+
+
+.b1 {
+
+background:#2563eb;
+
+left:10%;
+
+}
+
+
+.b2 {
+
+background:white;
+
+left:45%;
+
+}
+
+
+.b3 {
+
+background:#93c5fd;
+
+right:10%;
+
+}
+
+
+
+
+
+/* HEARTS */
+
+
+.heart {
+
+position:absolute;
+
+width:18px;
+
+height:18px;
+
+background:#8ddcff;
+
+transform:rotate(45deg);
+
+}
+
+
+
+
 /* CAKE */
 
 
 .cake {
 
-width:260px;
+width:220px;
 
-height:200px;
+height:170px;
 
-margin:40px auto;
+margin:15px auto;
 
 position:relative;
 
+transform:scale(.8);
+
 }
+
 
 
 .cake-body {
@@ -298,9 +425,9 @@ position:absolute;
 
 bottom:0;
 
-width:260px;
+width:220px;
 
-height:100px;
+height:90px;
 
 background:#6b341f;
 
@@ -309,15 +436,16 @@ border:6px solid #3b1c0f;
 }
 
 
+
 .cake-top {
 
 position:absolute;
 
-top:55px;
+top:45px;
 
-width:260px;
+width:220px;
 
-height:40px;
+height:35px;
 
 background:#d8a074;
 
@@ -327,13 +455,14 @@ border:6px solid #3b1c0f;
 
 
 
+
 .candle {
 
 position:absolute;
 
-width:10px;
+width:8px;
 
-height:50px;
+height:45px;
 
 background:white;
 
@@ -342,25 +471,25 @@ z-index:3;
 }
 
 
+
 .candle:after {
 
 content:"";
 
 position:absolute;
 
-width:12px;
+width:10px;
 
-height:12px;
+height:10px;
 
 background:#ffd633;
 
-top:-12px;
-
-left:-1px;
+top:-10px;
 
 border-radius:50%;
 
 }
+
 
 
 .candle.off:after {
@@ -370,125 +499,88 @@ display:none;
 }
 
 
+
+
 /* IPAD */
 
-@media (min-width:768px){
+@media(min-width:768px){
 
-.screen {
-
-width:80vw;
-max-width:950px;
-
-}
-
-
-.question-card {
-
-padding:50px;
-
-}
-
-
-.answer {
-
-font-size:30px;
-
-min-height:100px;
-
-}
-
-
-button {
-
-font-size:28px;
-
-}
-
-}
-
-
-/* LANDSCAPE */
-
-@media (orientation:landscape){
 
 .game {
 
-align-items:flex-start;
+padding:20px;
 
-}
-
-.screen {
-
-padding-top:30px;
-
-}
-
-}
-/* FINAL IPAD SIZE FIX */
-
-.game {
-  min-height: 100vh;
-  padding: 20px;
-  overflow: hidden;
 }
 
 
 .screen {
-  width: min(85vw, 700px);
-  max-height: 100vh;
-  padding: 20px;
+
+width:700px;
+
+max-width:85vw;
+
+padding:20px;
+
 }
+
 
 
 h1 {
-  font-size: 38px;
-  line-height: 1.3;
+
+font-size:38px;
+
 }
+
 
 
 p {
-  font-size: 18px;
-  line-height: 1.5;
+
+font-size:20px;
+
 }
 
-
-.pixel-duck {
-  width: 110px;
-  height: 110px;
-  transform: scale(.9);
-}
 
 
 .question-card {
-  padding: 25px;
+
+padding:30px;
+
 }
+
 
 
 .question-card h2 {
-  font-size: 25px;
-  line-height: 1.4;
+
+font-size:26px;
+
 }
 
-
-#answers {
-  gap: 12px;
-}
 
 
 .answer {
-  min-height: 60px;
-  padding: 15px;
-  font-size: 20px;
+
+font-size:22px;
+
+min-height:65px;
+
 }
+
 
 
 button {
-  padding: 15px;
-  font-size: 20px;
+
+font-size:22px;
+
 }
 
 
+
 .cake {
-  transform: scale(.8);
-  margin: 15px auto;
+
+transform:scale(.75);
+
+}
+
+
+
 }
