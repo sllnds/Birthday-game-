@@ -586,3 +586,17 @@ transform:scale(.85);
   max-height: 90vh;
   overflow-y: auto;
 }
+.answer {
+  background: #dff4ff !important;
+  color: #0b1f3a !important;
+  border: 5px solid #1769aa !important;
+  text-align: left;
+  font-size: 14px;
+}
+
+.answer span {
+  background: #1769aa !important;
+  color: white !important;
+  padding: 8px 10px;
+  margin-right: 10px;
+}
